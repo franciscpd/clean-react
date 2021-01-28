@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Footer, FormStatus, Input, LoginHeader } from '@/presentation/components'
 
-import Styles from './login-styles.scss'
+import Styles from './styles.scss'
 
 const Login: React.FC = () => {
   return (<div className={Styles.login}>
