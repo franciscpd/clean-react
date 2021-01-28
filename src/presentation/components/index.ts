@@ -1,3 +1,4 @@
 import Spinner from './spinner'
+import Logo from './logo'
 
-export { Spinner }
+export { Spinner, Logo }
