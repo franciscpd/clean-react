@@ -6,12 +6,12 @@ import { FormContext } from '@/presentation/contexts'
 import Styles from './styles.scss'
 
 const FormStatus: React.FC = () => {
-  const { isLoading, errorMessage } = useContext(FormContext)
+  const { state, errorState } = useContext(FormContext)
 
   return (
     <div data-testid="error-wrap" className={Styles.errorWrap}>
-      {isLoading && <Spinner className={Styles.spinner} />}
-      {errorMessage && <span className={Styles.error}>{errorMessage}</span>}
+      {state.isLoading && <Spinner className={Styles.spinner} />}
+      {errorState.main && <span className={Styles.error}>{errorState.main}</span>}
     </div>
   )
 }
