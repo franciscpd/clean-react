@@ -33,7 +33,7 @@ const Login: React.FC<Props> = ({ validation }: Props) => {
         password: validation.validate('password', state.data.password)
       }
     }))
-  }, [state.data.email])
+  }, [state.data.email, state.data.password])
 
   return (<div className={Styles.login}>
     <LoginHeader />
