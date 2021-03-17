@@ -40,11 +40,11 @@ const Login: React.FC<Props> = ({ validation }: Props) => {
     <FormContext.Provider value={{ state, setState }}>
       <form className={Styles.form}>
         <h2>Login</h2>
-        <Input type="email" name="email" placeholder="Digite seu e-mail"/>
-        <Input type="password" name="password" placeholder="Digite sua senha"/>
-        <button data-testid="submit" disabled className={Styles.submit} type="submit">Entrar</button>
+        <Input type="email" name="email" placeholder="Digite seu e-mail" />
+        <Input type="password" name="password" placeholder="Digite sua senha" />
+        <button data-testid="submit" disabled={Boolean(state.errors.email || state.errors.password)} className={Styles.submit} type="submit">Entrar</button>
         <span className={Styles.link}>
-        Criar conta
+          Criar conta
         </span>
         <FormStatus />
       </form>
