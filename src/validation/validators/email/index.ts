@@ -7,7 +7,7 @@ export class EmailValidation implements FieldValidation {
   constructor (readonly field) {}
 
   validate (value: string): Error {
-    if (this.emailRegex.test(String(value).toLowerCase())) {
+    if (!value || this.emailRegex.test(String(value).toLowerCase())) {
       return null
     }
 
